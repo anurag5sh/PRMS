@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<style>
+body {
+  margin:0px;
+  
+}
+
+/* Style the header */
+.header1 {
+background-color:#333;
+padding:10px;
+text-align:center;
+color:white;
+font-size:18px;
+font-family:Optima;
+}
+
+.header1 h2{
+padding:5px;
+text-align:center;
+color:white;
+font-size:24px;
+display:inline;
+}
+.header1 img{
+float:left;
+}
+</style>
+<style>
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.navbar1 {
+  overflow: hidden;
+  background-color:white;
+font-family:Calibri;
+
+
+}
+
+.navbar1 a {
+  float: left;
+  font-size:22px;
+  color:black;
+  text-align: center;
+  padding: 15px 17px;
+  text-decoration: none;
+  border-radius:8px;
+margin-top:3px;
+margin-left:2px;
+margin-botton:1px;
+margin-right:1px;
+}
+.navbar1 a.active{
+ background-color:dimgrey;
+  color:white;  
+}
+
+.dropdown1 button.active{
+ background-color:dimgrey;
+  color:white;  
+}
+
+.dropdown1 {
+float:left;
+  overflow: hidden;
+ border-radius:8px;
+margin-top:3px;
+margin-bottom:1px;
+font-family:Calibri;
+
+
+}
+
+.dropdown1 .dropbtn1 {
+  font-size:22px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding:15px 17px;
+  background-color: inherit;
+  font-family: inherit;
+  margin:0;
+}
+
+.navbar1 a:hover, .dropdown1:hover .dropbtn1 {
+  background-color:grey;
+  text-decoration: none;
+  color:black;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width:190px;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+float:left;
+
+}
+
+.dropdown-content1 a {
+  float: none;
+  color: black;
+  padding:18px 22px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+font-size:19px;
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ccc;
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="header1 " >
+<h2 >POLICE RECORD MANAGEMENT SYSTEM</h2>
+<p align="right" style="font-family:Calibri">Welcome <?php echo strtoupper($fname_session); ?> </p>
+</div>
+
+
+<div class="navbar1">
+    <a id="myprofile" href="myprofile.php">MY PROFILE</a>
+<div class="dropdown1" >
+    <button class="dropbtn1" id="mycases">MY CASES 
+      
+    </button>
+    <div class="dropdown-content1">
+      <a href="mycases.php?type=Civil" >Civil</a>
+      <a href="mycases.php?type=Criminal">Criminal</a>
+     
+    </div>
+  </div>
+
+  <a id="fir" href="fir.php">FIR</a>
+
+  <div class="dropdown1">
+    <button class="dropbtn1" id="othercases">OTHER CASES
+      
+    </button>
+    <div class="dropdown-content1">
+      <a href="other-cases.php?type=Civil">Civil</a>
+      <a href="other-cases.php?type=Criminal">Criminal</a>
+      
+    </div>
+  </div> 
+  <a id="awards" href="awards.php">AWARDS</a>
+ <a id="notification" href="notification.php">NOTIFICATIONS</a> 
+<a href="stat_codes.php">STATION CODES</a> 
+<a href="logout.php">LOGOUT</a> 
+</div>
+
+</body>
+</html>
